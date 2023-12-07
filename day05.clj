@@ -154,8 +154,6 @@ humidity-to-location map:
       (create-maps)
       (reduce
         (fn [result maps]
-          (println
-            (map #(convert % maps) result))
           (flatten-mixed (map #(convert % maps) result)))
         seeds-intervals)
       (map first)
